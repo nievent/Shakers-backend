@@ -16,7 +16,6 @@ export class ProjectsService {
     const json = fs.readFileSync(filePath, 'utf-8');
     const parsed = JSON.parse(json) as unknown;
 
-    // Validamos que sea un array (opcional pero recomendable)
     if (Array.isArray(parsed)) {
       this.projects = parsed as Project[];
     } else {
